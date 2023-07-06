@@ -33,19 +33,19 @@
                             <div class="col-4 g-0">
                                 <div class="row justify-content-between align-items-center ">
                                     
-                                   <div class="avatar-box col-3">
-                                    <div class="img-box">
-                                        <img src="img/avatar_io.jpg" alt="">
-                                    </div>
+                                    <div class="avatar-box col-4">
+                                        <div class="img-box">
+                                            <img src="img/avatar_io.jpg" alt="">
+                                        </div>
 
-                                    <div class="title">
-                                        <h6>
-                                            Sofia
-                                        </h6>
-                                    </div>
+                                        <div class="title">
+                                            <h6>
+                                                Sofia
+                                            </h6>
+                                        </div>
                                    </div>
                                             
-                                    <div class="icons col-3">
+                                    <div class="icons col-4">
                                         <i class="fa-solid fa-circle-notch"></i>
                                         <i class="fa-solid fa-message"></i>
                                         <i class="fa-solid fa-ellipsis-vertical"></i>
@@ -67,22 +67,39 @@
 
                                 <div class="input-group input-group">
                                     
-                                    <input type="text" placeholder="Cerca o inizia una nuova chat" class="form-control">
+                                    <input type="text" id="contacts-research" name="contacts-research" placeholder="Cerca o inizia una nuova chat" class="form-control">
                                 </div>
                                     
                                   
                                 <ul class="list-group list-group-flush">
 
                                     <li v-for="singleContact in contacts" class="list-group-item">
-                                        <div class="img-box">
+                                        <div class="avatar-box col-6">
+                                            <div class="img-box">
+                                                
+                                                <img :src="singleContact.avatar" alt="">
+                                            </div>
                                             
-                                            <img :src="singleContact.avatar" alt="">
+                                            <div class="title">
+    
+                                                <h6>
+                                                    {{singleContact.name}}
+                                                </h6>
+                                            </div>
                                         </div>
-                                        
-                                        {{singleContact.name}}
+
                                     </li>
-                                    
                                 </ul>
+                                        
+                            </div>
+                                        
+                            <div class="col-8 g-0 messages-box">
+                               <div v-for="singleMessage in messages">
+                                {{singleContact.messages}}
+
+                               </div> 
+                            </div>
+                                    
                                         
                                         
                                     
@@ -101,11 +118,7 @@
                                     
                                     
                                 
-                            </div>
 
-                            <div class="col-8 g-0 messages-box">
-                                
-                            </div>
 
                         </div>
                     </div>
