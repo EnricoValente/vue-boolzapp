@@ -1,0 +1,85 @@
+header {
+    height: 70px;
+    width: 100vw;
+}
+
+main {
+    background-color: lightgray;
+    height: calc(100vh - 70px);
+    width: 100vw;
+    
+    
+}
+
+.container-fluid {
+    overflow: hidden;
+}
+
+.img-box {
+    width: 60px;
+    display: inline-block;
+    
+    
+}
+    
+    
+    
+    
+    
+
+
+
+
+.img-box > img {
+    width: 100%;
+    object-fit: cover;
+    display: inline-block;
+    border-radius: 50%;
+    
+
+}
+
+.title{
+    display: inline-block;
+}
+
+h6 {
+    font-size: 10px;
+    padding-left: 5px;
+    
+}
+
+
+    
+.icons > i {
+    padding-right: 7px;
+    
+}
+
+.circle-icon-box {
+    background-color: lightblue;
+}
+
+.circle-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    line-height: 40px;
+    text-align: center;
+    display: inline-block;
+}
+
+.circle-icon-box .circle-icon > i {
+    font-size: 20px;
+    color: lightblue;
+}
+    
+.circle-icon + span {
+    font-size: 12px;
+}
+ 
+.messages-box {
+    background-image: url("../img/mine.jpg");
+}
+    
