@@ -7,13 +7,14 @@ main {
     background-color: lightgray;
     height: calc(100vh - 70px);
     width: 100vw;
+    overflow: hidden;
+    
     
     
 }
 
-.container-fluid {
-    overflow: hidden;
-}
+
+
 
 .img-box {
     width: 60px;
@@ -52,7 +53,7 @@ h6 {
 
     
 .icons > i {
-    padding-right: 7px;
+    padding-right: 20px;
     
 }
 
@@ -83,3 +84,16 @@ h6 {
     background-image: url("../img/mine.jpg");
 }
     
+
+.sent {
+    background-color:#D5F9BA;
+    border-radius: 8px;
+
+}
+
+.recived {
+    background-color: white;
+    border-radius: 8px;
+
+
+}
