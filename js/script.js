@@ -178,6 +178,7 @@ createApp({
         myClick(i){
             console.log(i)
             this.currentContact=i
+            
         }
     }
 }).mount('#app')
