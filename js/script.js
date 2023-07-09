@@ -4,6 +4,7 @@ const {createApp}= Vue;
 
 createApp({
     data(){
+        //contacts[0].meassages[0].message
         return {
             contacts: [
                 {
@@ -168,8 +169,15 @@ createApp({
                     ],
                 }
             ],
-            
+            currentContact:0
 
+        }
+        
+    },
+    methods: {
+        myClick(i){
+            console.log(i)
+            this.currentContact=i
         }
     }
 }).mount('#app')
