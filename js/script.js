@@ -190,7 +190,11 @@ createApp({
                 ...this.newMessage
             };
             this.contacts[this.currentContact].messages.push(myNewMessage);
-            this.newMessage = '';
+            this.newMessage = {
+                message: '',
+                status: 'sent'
+                
+            };
 
             setTimeout(()=>{
                 this.contacts[this.currentContact].messages.push({
