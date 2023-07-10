@@ -145,7 +145,7 @@
                             </div>
         
                             <div class="keyboard">
-                                <input type="text" placeholder="Scrivi un messaggio">
+                                <input v-model="newMessage.message" @keyup.enter="sendNewMessage(newMessage.message)" type="text" placeholder="Scrivi un messaggio">
                             </div>
         
                             <div class="microphone">

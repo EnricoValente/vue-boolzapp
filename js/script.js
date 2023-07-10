@@ -109,7 +109,7 @@ createApp({
                 },
                 {
                     name: 'Claudia',
-                    avatar: './img/avatar_5.jpg',
+                    avatar: './img/avatar_6.jpg',
                     visible: true,
                     messages: [
                         {
@@ -169,7 +169,12 @@ createApp({
                     ],
                 }
             ],
-            currentContact:0
+            currentContact:0,
+            newMessage: {
+                message: '',
+                status: 'sent'
+                
+            }
 
         }
         
@@ -179,6 +184,21 @@ createApp({
             console.log(i)
             this.currentContact=i
             
+        },
+        sendNewMessage(message){
+            const myNewMessage = {
+                ...this.newMessage
+            };
+            this.contacts[this.currentContact].messages.push(myNewMessage);
+            this.newMessage = '';
+
+            setTimeout(()=>{
+                this.contacts[this.currentContact].messages.push({
+                    message: 'Ok!',
+                    status: 'recived'
+                });
+
+            }, 1000)
         }
     }
 }).mount('#app')
