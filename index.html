@@ -77,7 +77,7 @@
                             </div>
                             
                             <ul class="list">
-                                <li v-for="(singleContact, i) in contacts" @click="myClick(i)">
+                                <li v-for="(singleContact, i) in contacts" @click="changeCurrentContact(i)">
                                     <div class="avatar-box">
                                         <div class="img-box">
                                             <img :src="singleContact.avatar" alt="">
@@ -106,10 +106,10 @@
 
                         <div class="avatar-box">
                             <div class="img-box">
-                                <img src="img/avatar_1.jpg" alt="">
+                                <img :src="contacts[currentContact].avatar" alt="">
                                 <div class="img-title">
                                     <h6>
-                                        Michele
+                                        {{contacts[currentContact].name}}
                                     </h6>
                                 </div>
 
@@ -124,12 +124,16 @@
 
                         <div class="messages">
                             
-                            <div class="sent">
-                                {{contacts[currentContact].messages[currentContact].message}}
-                            </div>
-                            <div class="recived">
-                                <!-- {{contacts[currentContact].messages[currentContact].message}} -->
-                            </div>
+                            <template v-for="singleMessage in contacts[currentContact].messages">
+                                <div v-if="singleMessage.status == 'sent'" class="sent">
+                                    {{singleMessage.message}}
+                                </div>
+                                <div v-else class="recived">
+                                    {{singleMessage.message}}
+                                </div>
+                                
+                                
+                            </template>
                                 
                         </div>
                         

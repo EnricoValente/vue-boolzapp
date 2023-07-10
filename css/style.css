@@ -150,6 +150,8 @@ ul > li {
     flex-direction: column;
     background-image: url("../img/mine.jpg");
     height: calc(100% - 100px);
+    overflow: auto;
+    
     
     
 }

@@ -175,7 +175,7 @@ createApp({
         
     },
     methods: {
-        myClick(i){
+        changeCurrentContact(i){
             console.log(i)
             this.currentContact=i
             
